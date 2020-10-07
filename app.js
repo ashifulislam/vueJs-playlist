@@ -15,7 +15,25 @@ new Vue({
         name:'',
         website:'https://web.facebook.com/?_rdc=1&_rdr',
         website2:'https://github.com/ashifulislam?tab=repositories',
-        website_tag:'<a href="https://twitter.com/ashiful_prince">Twitter Profile</a>'
+        website_tag:'<a href="https://twitter.com/ashiful_prince">Twitter Profile</a>',
+        available:false,
+        nearby:false,
+        error:false,
+        success:false,
+        characters: ['prince','aziz','sulmon','haradon'],
+        ninjas: [
+            {
+                name:'abir',age:25
+            },
+            {
+                name:'jamal',age:16
+            },
+            {
+                name:'Hridoy',age:22
+            }
+        ]
+
+
     },
     methods:{
         showName:function(last_name){
@@ -48,10 +66,19 @@ new Vue({
         },
         add_to_B:function(){
           return  this.b + this.age_update;
-        }
+        },
 
 
     },
+    computed:{
+        compClasses:function(){
+            return {
+                available1:this.available,
+                nearby1:this.nearby
+
+            }
+        }
+    }
 
 
 

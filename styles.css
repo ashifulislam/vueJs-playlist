@@ -4,3 +4,23 @@
     text-align:center;
     border:1px solid #333;
 }
+span{
+    background:red;
+    display:inline-block;
+    padding:10px;
+    color:#fff;
+    margin:10px 0;
+}
+.available1 span{
+    background:green;
+}
+.red span{
+    background:blue;
+}
+.nearby1 span:after{
+    content:'nearby';
+    margin-left:10px;
+
+}
+
+
